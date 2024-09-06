@@ -16,24 +16,9 @@
 
     </main>
     <footer>
-        <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>       
+        <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const burger = document.querySelector('.burger');
-            const menu = document.querySelector('.menu');
-    
-            if (burger && menu) {
-                burger.addEventListener('click', function () {
-                    this.classList.toggle('active');
-                    menu.classList.toggle('open');
-                });
-            } else {
-                console.error('Elements not found');
-            }
-        });
-    </script>
+    <script type="module" src="index.js"></script>
 </body>
 
 </html>
-
