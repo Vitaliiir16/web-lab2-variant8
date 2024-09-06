@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+.open {
+    display: flex !important;
+}
+header {
+    background: #ecdfd8;
+}
+
+.header-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo {
+    position: absolute;
+    top: 6vw;
+    left: 10%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+}
+
+.trk {
+    width: auto;
+    height: 3vw;
+}
+
+.trafico {
+    font-family: DM Serif Display;
+    font-size: 32px;
+    font-weight: 350px;
+    line-height: 25px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+    align-items: center;
+    margin-left: 20vw;
+}
+
+.info {
+    font-family: Rubik, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info:hover,
+.info:focus {
+    color: #000000;
+}
+
+#btn {
+    background-color: #EE4D47;
+    border-radius: 8px;
+    width: 12vw;
+    height: 4vw;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.burger {
+    display: flex;
+    position: relative;
+    z-index: 1000;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.burger span,
+.burger::before,
+.burger::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.burger span {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burger::before {
+    top: 0;
+}
+
+.burger::after {
+    bottom: 0;
+}
+
+.burger.active span { transform: scale(0) }
+
+.burger.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+
+@media (max-width: 860px) {
+    
+    .burger {
+        display: flex;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        background-color: #ecdfd8;
+        animation: burgerAnimation 0.4s;
+    }
+
+    .menu a {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+}
