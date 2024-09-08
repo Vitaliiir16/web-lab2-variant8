@@ -10,14 +10,54 @@
 
 <body>
     <header>
-        <section data-include="index.header.partial.html"></section>
+        <!--<section data-include="index.header.partial.html"></section>-->
+        <section class="header">
+            <div class="container header__container">
+                <button class="header__burger-btn" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div>
+                <div class="logo">
+                    <img class="trk" src="img/trinkle.png" alt="trk">
+                    <p class="trafico">TRAFICO.</p>
+                </div>
+                    <nav class="menu">
+                        <ul class="menu_list">
+        
+                            <li>
+                                <a class="menu_link" href="#">ABOUT</a>
+                            </li>
+        
+                            <li>
+                                <a class="menu_link" href="#">HOW TO</a>
+                            </li>
+        
+                            <li>
+                                <a class="menu_link" href="#">FAQS</a>
+                            </li>
+        
+                            <li>
+                                <a class="menu_link" id="btn" href="#">CONTACT US</a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+            </div>
+            <div class="header-container">
+                <img class="background" src="img/backimg.png" alt="background">
+            </div>
+        </section>
     </header>
     <main>
 
     </main>
     <footer>
-        <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
+        
     </footer>
+    <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
     <script type="module" src="index.js"></script>
 </body>
 
