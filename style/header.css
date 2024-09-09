@@ -1,25 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
 .open {
     display: flex !important;
 }
 
 head {
-    background: #e9dcd5;
+    background: #FEF8F5;
 }
 
 .header-container {
+    position: relative;
     width: 100%;
     height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.header-container img {
+.header-container img.background {
     width: 100%;
     height: auto;
     display: block;
+    position: relative;
+    z-index: 1;
 }
 
 .header__burger-btn {
@@ -39,18 +40,18 @@ head {
 .header__burger-btn span {
     position: absolute;
     width: 80%;
-    height: 0.3vw;
+    height: 7%;
     background-color: #ffffff;
     left: 3px;
     transition: transform .5s, opacity .5s, background-color .5s;
 }
 
 .header__burger-btn span:nth-child(1) {
-    transform: translateY(-0.9vw);
+    transform: translateY(-1vw);
 }
 
 .header__burger-btn span:nth-child(3) {
-    transform: translateY(0.9vw);
+    transform: translateY(1vw);
 }
 
 .header.open .header__burger-btn span:nth-child(1) {
@@ -68,7 +69,7 @@ head {
 .logo {
     display: flex;
     position: absolute;
-    top: 6vw;
+    top: 7vw;
     left: 10%;
     z-index: 10;
     display: flex;
@@ -90,29 +91,43 @@ head {
     color: #ffffff;
 }
 
+
 .menu__list li {
     list-style: none;
 }
 
 
-@media (min-width: 861px) {
+@media (min-width: 901px) {
+
+    .logo,
     .menu {
-        display: flex;
-        justify-content: center;
-        margin-top: -100pxpx;
+        position: absolute;
+        z-index: 10;
     }
-    
+
+    .nav-bar {
+        margin-right: 40%;
+    }
+
+
+
+    #btn {
+        background-color: #EE4D47;
+        border-radius: 8px;
+    }
+
     .menu_list {
         display: flex;
         list-style-type: none;
         padding: 0;
-        margin: 0;
+        margin-left: 38vw;
+        margin-top: 8.2vw;
     }
-    
-    .menu_list li {
-        margin: 0 2vw;
+
+    li {
+        margin-right: 4vw;
     }
-    
+
     .menu_link {
         text-decoration: none;
         color: #FFFFFF;
@@ -125,22 +140,77 @@ head {
         padding: 10px 15px;
         transition: color 0.3s ease;
     }
-    
+
     .menu_link:hover {
-        color: #EE4D47;
+        color: #000000;
+    }
+
+    .text {
+        width: 40%;
+        position: absolute;
+        z-index: 10;
+        font-family: 'DM Serif Display', serif;
+        font-size: 5vw;
+        font-weight: 400;
+        line-height: 1.2;
+        text-align: left;
+        color: #FFFFFF;
+        top: 25%;
+        left: 15%;
+        right: 10%;
+        word-wrap: break-word;
+    }
+
+    .start {
+        position: absolute;
+        z-index: 10;
+        font-family: 'Rubik', sans-serif;
+        font-size: 1.5vw;
+        font-weight: 700;
+        color: #FFFFFF;
+        background-color: #EE4D47;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: -30%;
+        left: 15%;
+        transition: background-color 0.3s ease;
+    }
+
+    .car {
+        transition: transform 2s ease-in-out;
+        position: absolute;
+        width: 37%;
+        justify-content: start;
+        top: 52vw;
+        z-index: 20;
     }
     
+    @keyframes move-right {
+        0% {
+            transform: translateX(0);
+        }
+    
+        100% {
+            transform: translateX(100vw);
+        }
+    }
+    
+    .car.animating {
+        animation: move-right 2s linear forwards;
+    }
+
 
 }
 
-@media (max-width: 860px) {
+@media (max-width: 900px) {
     .logo {
         display: flex;
         justify-content: flex-end;
         position: absolute;
         top: 6vw;
         right: 10%;
-        z-index: 10;
+        z-index: 100;
         display: flex;
         align-items: center;
     }
@@ -152,6 +222,7 @@ head {
     .header__burger-btn {
         display: block;
         left: 0;
+        z-index: 1000;
     }
 
     .menu {
@@ -164,13 +235,22 @@ head {
         width: 250px;
         height: auto;
         transition: transform .5s;
+        z-index: 100;
+    }
+
+    li {
+        padding: 30px;
+    }
+
+    .menu_list {
+        list-style-type: none;
     }
 
     .menu__list li {
         list-style: none;
-        margin-bottom: 20px; 
+        margin-bottom: 20px;
     }
-    
+
     .menu_link {
         color: #ffffff;
         text-decoration: none;
@@ -182,15 +262,15 @@ head {
         text-align: center;
         transition: color 0.3s ease;
     }
-    
+
     .menu_link:active {
         color: #000000;
     }
-    
+
     .menu_link:focus {
         outline: none;
     }
-    
+
     .menu_link:hover {
         color: #EE4D47;
     }
@@ -199,4 +279,61 @@ head {
         transform: translateX(100%);
     }
 
+    .text {
+        width: 40%;
+        position: absolute;
+        z-index: 10;
+        font-family: 'DM Serif Display', serif;
+        font-size: 5vw;
+        font-weight: 400;
+        line-height: 1.2;
+        text-align: left;
+        color: #FFFFFF;
+        top: 50px;
+        left: 20%;
+        right: 10%;
+        word-wrap: break-word;
+    }
+
+    .start {
+        width: 12%;
+        position: absolute;
+        z-index: 10;
+        font-family: 'Rubik', sans-serif;
+        font-size: 1.5vw;
+        font-weight: 700;
+        color: #FFFFFF;
+        background-color: #EE4D47;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: -30%;
+        left: 20%;
+        transition: background-color 0.3s ease;
+    }
+
+    .car {
+        transition: transform 2s ease-in-out;
+        position: absolute;
+        width: 37%;
+        justify-content: start;
+        top: 52vw;
+        z-index: 20;
+    }
+    
+    @keyframes move-right {
+        0% {
+            transform: translateX(0);
+        }
+    
+        100% {
+            transform: translateX(100vw);
+        }
+    }
+    
+    .car.animating {
+        animation: move-right 2s linear forwards;
+    }
+
 }
+
