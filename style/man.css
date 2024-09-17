@@ -138,14 +138,14 @@
     }
 
     .man-foto {
-        display: flex; /* Використання Flexbox */
-        justify-content: center; /* Вирівнює зображення по центру по горизонталі */
-        align-items: center; /* Вирівнює зображення по центру по вертикалі */
+        display: flex; 
+        justify-content: center;
+        align-items: center;
     }
     
     .man-foto img {
-        width: 70%; /* Задає ширину зображення */
-        height: auto; /* Зберігає пропорції зображення */
+        width: 70%;
+        height: auto;
     }
 }
 
@@ -219,7 +219,9 @@
         align-items: flex-start;
         gap: 10px;
         padding: 0 10vw;
-        margin-left: 10%;
+        margin: 0;
+        position: relative;
+        justify-content: center;
     }
 
     .text-container {
