@@ -134,21 +134,7 @@
         </section>
     </footer>
 
-    <script type="module" src="index.js"></script>
-    <script>
-        function carSlide() {
-            const car = document.querySelector('.car');
-            car.classList.add('animating');
-
-            car.addEventListener('animationend', () => {
-                car.classList.remove('animating');
-                car.style.transform = 'translateX(-100%)';
-                setTimeout(() => {
-                    car.style.transform = 'translateX(0)';
-                }, 0);
-            }, { once: true });
-        }
-    </script>
+    <script src="scipt.js"></script>
 </body>
 
 </html>

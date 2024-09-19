@@ -161,21 +161,6 @@ head {
         word-wrap: break-word;
     }
 
-    .start {
-        position: absolute;
-        z-index: 10;
-        font-family: 'Rubik', sans-serif;
-        font-size: 1.5vw;
-        font-weight: 700;
-        color: #FFFFFF;
-        background-color: #EE4D47;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        margin-top: -30%;
-        left: 15%;
-        transition: background-color 0.3s ease;
-    }
 
     .car {
         transition: transform 2s ease-in-out;
@@ -283,6 +268,7 @@ head {
         margin-bottom: 20px;
     }
 
+
     .menu_link {
         color: #ffffff;
         text-decoration: none;
@@ -327,22 +313,7 @@ head {
         word-wrap: break-word;
     }
 
-    .start {
-        width: 12%;
-        position: absolute;
-        z-index: 10;
-        font-family: 'Rubik', sans-serif;
-        font-size: 1.5vw;
-        font-weight: 700;
-        color: #FFFFFF;
-        background-color: #EE4D47;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        margin-top: -30%;
-        left: 20%;
-        transition: background-color 0.3s ease;
-    }
+    
 
     .car {
         transition: transform 2s ease-in-out;
@@ -369,3 +340,62 @@ head {
 
 }
 
+
+@media (max-width: 650px) {
+    .start {
+        position: relative; /* Залишаємо кнопку в потоці документа */
+        margin: 20px auto; /* Центруємо кнопку по горизонталі */
+        width: auto;
+        max-width: 80%; /* Обмежуємо ширину кнопки до 80% ширини екрану */
+        z-index: 10;
+        background-color: #EE4D47;
+        padding: 15px 0; /* Вирівнюємо текст по вертикалі */
+        color: #FFFFFF;
+        text-decoration: none;
+        font-family: Rubik;
+        font-size: 24px; /* Збільшуємо розмір тексту */
+        font-weight: 700;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center; /* Центруємо текст по горизонталі */
+        align-items: center; /* Центруємо текст по вертикалі */
+        transition: background-color 0.3s ease; /* Плавна зміна фону */
+        text-align: center;
+        white-space: nowrap; /* Забороняємо перенесення тексту */
+    }
+    
+    .start:hover {
+        background-color: #D43C3C;
+    }
+    
+    .start:active {
+        background-color: #BB3A3A;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+}
+
+@media (min-width: 650px) {
+    .start {
+        position: absolute;
+        z-index: 10;
+        font-family: 'Rubik', sans-serif;
+        font-size: 1.5vw;
+        font-weight: 700;
+        color: #FFFFFF;
+        background-color: #EE4D47;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: -30%;
+        left: 15%;
+        transition: background-color 0.3s ease;
+    }
+
+    .start:hover {
+        background-color: #D43C3C;
+    }
+    
+    .start:active {
+        background-color: #BB3A3A;
+    }
+}
